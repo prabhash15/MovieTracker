@@ -1,0 +1,75 @@
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  margin-bottom: 30px;
+}
+
+#searchInput {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#result {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.movie-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  max-width: 700px;
+  display: flex;
+  gap: 20px;
+}
+
+.movie-poster {
+  max-width: 200px;
+  border-radius: 8px;
+}
+
+.movie-info {
+  text-align: left;
+}
+
+.movie-info h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.movie-info p {
+  margin: 6px 0;
+}
+
