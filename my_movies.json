@@ -1,0 +1,100 @@
+[
+    {
+        "Title": "One Piece",
+        "Year": "1999\u2013",
+        "Rated": "TV-14",
+        "Released": "20 Oct 1999",
+        "Runtime": "24 min",
+        "Genre": "Animation, Action, Adventure",
+        "Director": "N/A",
+        "Writer": "Eiichir\u00f4 Oda",
+        "Actors": "Mayumi Tanaka, Akemi Okamura, Tony Beck",
+        "Plot": "Rubber-bodied dreamer Monkey D. Luffy gathers an eclectic pirate crew and braves the perilous Grand Line, battling tyrants and monsters to claim the legendary \"One Piece\" and become King of the Pirates.",
+        "Language": "Japanese",
+        "Country": "Japan",
+        "Awards": "7 wins & 15 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMTNjNGU4NTUtYmVjMy00YjRiLTkxMWUtNzZkMDNiYjZhNmViXkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+            {
+                "Source": "Internet Movie Database",
+                "Value": "9.0/10"
+            }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "9.0",
+        "imdbVotes": "318,583",
+        "imdbID": "tt0388629",
+        "Type": "series",
+        "totalSeasons": "1",
+        "Response": "True"
+    },
+    {
+        "Title": "The Hunt",
+        "Year": "2012",
+        "Rated": "R",
+        "Released": "14 Nov 2012",
+        "Runtime": "115 min",
+        "Genre": "Drama",
+        "Director": "Thomas Vinterberg",
+        "Writer": "Thomas Vinterberg, Tobias Lindholm",
+        "Actors": "Mads Mikkelsen, Thomas Bo Larsen, Annika Wedderkopp",
+        "Plot": "A teacher lives a lonely life, all the while struggling over his son's custody. His life slowly gets better as he finds love and receives good news from his son, but his new luck is about to be brutally shattered by an innocent li...",
+        "Language": "Danish, English, Polish",
+        "Country": "Denmark, Sweden, Belgium, France",
+        "Awards": "Nominated for 1 Oscar. 38 wins & 74 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMTg2NDg3ODg4NF5BMl5BanBnXkFtZTcwNzk3NTc3Nw@@._V1_SX300.jpg",
+        "Ratings": [
+            {
+                "Source": "Internet Movie Database",
+                "Value": "8.3/10"
+            },
+            {
+                "Source": "Rotten Tomatoes",
+                "Value": "92%"
+            },
+            {
+                "Source": "Metacritic",
+                "Value": "77/100"
+            }
+        ],
+        "Metascore": "77",
+        "imdbRating": "8.3",
+        "imdbVotes": "391,965",
+        "imdbID": "tt2106476",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "$613,308",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+    },
+    {
+        "Title": "True Detective",
+        "Year": "2014\u2013",
+        "Rated": "TV-MA",
+        "Released": "12 Jan 2014",
+        "Runtime": "55 min",
+        "Genre": "Crime, Drama, Mystery",
+        "Director": "N/A",
+        "Writer": "Nic Pizzolatto, Issa L\u00f3pez",
+        "Actors": "Vince Vaughn, Colin Farrell, Rachel McAdams",
+        "Plot": "Anthology series in which police investigations unearth the personal and professional secrets of those involved, both within and outside the law.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "Won 6 Primetime Emmys. 46 wins & 168 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BYjgwYzA1NWMtNDYyZi00ZGQyLWI5NTktMDYwZjE2OTIwZWEwXkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+            {
+                "Source": "Internet Movie Database",
+                "Value": "8.9/10"
+            }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "8.9",
+        "imdbVotes": "717,573",
+        "imdbID": "tt2356777",
+        "Type": "series",
+        "totalSeasons": "4",
+        "Response": "True"
+    }
+]
