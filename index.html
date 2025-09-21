@@ -7,14 +7,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Movie Search</h1>
-  <div class="search-bar">
-    <input type="text" id="searchInput" placeholder="Enter a movie name..." />
-    <button id="searchBtn">Search</button>
+  <div class="container">
+    <h1>Movie Tracker</h1>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search movies..." />
+      <button id="searchBtn">🔍</button>
+    </div>
+
+    <div id="result"></div>
+
+    <!-- Rated Movies Section -->
+    <div class="rated-section">
+      <h2> Watched </h2>
+      <div id="ratedMovies" class="rated-grid"></div>
+    </div>
+
+    <!-- Popup Notification -->
+    <div id="popup" class="popup"></div>
   </div>
-
-  <div id="result"></div>
-
   <script src="script.js"></script>
 </body>
 </html>
