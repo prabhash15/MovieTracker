@@ -194,15 +194,24 @@ h1 {
 /* Rated Movie Cards */
 .rated-card {
   flex: 0 0 160px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.rated-card-content {
+  position: relative;
   background: #2e3440;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  height: 100%;
   transition: transform 0.3s, box-shadow 0.3s;
-  cursor: pointer;
 }
 
-.rated-card:hover {
+.rated-card:hover .rated-card-content {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }
@@ -239,6 +248,52 @@ h1 {
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+/* Delete Overlay */
+.delete-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  border-radius: 12px;
+}
+
+.rated-card:hover .delete-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.delete-btn {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.delete-btn:hover {
+  background: #d32f2f;
+  transform: scale(1.05);
+}
+
+.delete-btn:active {
+  transform: scale(0.95);
 }
 
 /* Empty state message */
@@ -305,5 +360,10 @@ h1 {
   
   .rated-poster {
     height: 180px;
+  }
+  
+  .delete-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
   }
 }

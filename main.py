@@ -65,3 +65,25 @@ async def save_movie(movie_data: dict):
 
     return {"message": "saved the data"}
 
+@app.delete("/movie/delete/{imdbID}")
+async def DeleteMovie(imdbID):
+    temp = []
+    with open("my_movies.json", "r") as f:
+        try:
+            movies = json.load(f)
+            if isinstance(movies, dict):   # wrap single dict
+                movies = [movies]
+
+            for movie in movies:
+                if movie["imdbID"] != imdbID:
+                    temp.append(movie)
+
+        except json.JSONDecodeError:
+            print("error while opening the file for deletion")
+            movies = []
+
+    with open("my_movies.json" , "w") as f:
+        json.dump(temp , f , indent=4)
+
+    
+

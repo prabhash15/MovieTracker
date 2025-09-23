@@ -34,11 +34,18 @@ function renderRatedMovies(movies) {
       <div class="rated-grid-wrapper">
         <div class="rated-grid" id="moviesGrid">
           ${reversedMovies.map(m => `
-            <div class="rated-card">
-              <img class="rated-poster" src="${m.Poster}" alt="${m.Title}">
-              <div class="rated-info">
-                <div class="rated-title">${m.Title}</div>
-                <div class="rated-rating">⭐ ${m.userRating}</div>
+            <div class="rated-card" data-movie-id="${m.imdbID || m.Title}">
+              <div class="rated-card-content">
+                <img class="rated-poster" src="${m.Poster}" alt="${m.Title}">
+                <div class="rated-info">
+                  <div class="rated-title">${m.Title}</div>
+                  <div class="rated-rating">⭐ ${m.userRating}</div>
+                </div>
+                <div class="delete-overlay">
+                  <button class="delete-btn" onclick="deleteMovie('${m.imdbID || m.Title}', '${m.Title}')">
+                    🗑️ Delete
+                  </button>
+                </div>
               </div>
             </div>
           `).join("")}
@@ -47,6 +54,34 @@ function renderRatedMovies(movies) {
     </div>
   `;
   
+}
+
+async function deleteMovie(movieId, movieTitle) {
+  try {
+    // Show loading state
+    showPopup("⏳ Deleting movie...");
+    
+    const response = await fetch(`http://localhost:8000/movie/delete/${encodeURIComponent(movieId)}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to delete movie: ${response.status}`);
+    }
+
+    const result = await response.json();
+    showPopup(`✅ "${movieTitle}" deleted successfully!`);
+
+    // Refresh the rated movies list
+    await loadRatedMovies();
+
+  } catch (err) {
+    console.error("Delete movie error:", err);
+    showPopup("⚠️ Failed to delete movie.");
+  }
 }
 
 function scrollMovies(direction) {
