@@ -13,13 +13,31 @@ app.add_middleware(
     allow_origins=["*"],   
     allow_credentials=True,
     allow_methods=["*"],
-    allow_headers=["*"],
+    allow_headers=["*", "ngrok-skip-browser-warning"],
 )
 
 def get_movie_details(movieName):
     endpoint = f"https://www.omdbapi.com/?t={movieName}&apikey={API_KEY}"
     response = requests.get(endpoint)
     return response.json()
+
+def save(movieData , allMovies):
+
+    f = 0
+
+    if allMovies == []:
+        allMovies.append(movieData)
+        return allMovies
+
+    for i in range(len(allMovies)):
+        if allMovies[i]["Title"] == movieData["Title"]:
+            f = 1
+            allMovies.pop(i)
+            allMovies.insert(i , movieData);
+
+    if f == 0:
+        allMovies.append(movieData)
+    return allMovies
 
 @app.get("/movie/ratedbyme")
 def rated_movies():
@@ -45,7 +63,8 @@ async def get_data(movieName: str):
 
 @app.post("/movie/save")
 async def save_movie(movie_data: dict):
-    print("saving a movie")
+
+
     # Ensure file exists & contains a list
     if os.path.exists("my_movies.json") and os.path.getsize("my_movies.json") > 0:
         with open("my_movies.json", "r") as f:
@@ -55,10 +74,11 @@ async def save_movie(movie_data: dict):
                     movies = [movies]
             except json.JSONDecodeError:
                 movies = []
+
     else:
         movies = []
 
-    movies.append(movie_data)
+    movies = save(movie_data , movies);
 
     with open("my_movies.json", "w") as my_movies:
         json.dump(movies, my_movies, indent=4)
@@ -84,6 +104,4 @@ async def DeleteMovie(imdbID):
 
     with open("my_movies.json" , "w") as f:
         json.dump(temp , f , indent=4)
-
-    
 
